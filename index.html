@@ -1,1 +1,291 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#5145cd">
+  <title>Zenvora — One World. One Connection.</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f5fb;
+      color: #20213a;
+    }
+
+    header {
+      background: linear-gradient(135deg, #5145cd, #8b5cf6);
+      color: white;
+      padding: 22px 16px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 32px;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      margin-top: 7px;
+      opacity: 0.95;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 14px;
+      background: white;
+      box-shadow: 0 2px 10px #0000000d;
+    }
+
+    nav a {
+      color: #5145cd;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container {
+      width: min(900px, 92%);
+      margin: 24px auto;
+    }
+
+    .hero, .card, .auth {
+      background: white;
+      padding: 22px;
+      border-radius: 16px;
+      margin-bottom: 20px;
+      box-shadow: 0 5px 20px #24204a0c;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 36px 20px;
+    }
+
+    .hero h2 {
+      font-size: 27px;
+      margin-bottom: 12px;
+    }
+
+    .hero p, .muted {
+      color: #686981;
+      line-height: 1.6;
+    }
+
+    .button {
+      display: inline-block;
+      border: none;
+      border-radius: 9px;
+      padding: 12px 18px;
+      margin: 12px 5px 0;
+      background: #5145cd;
+      color: white;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .button.secondary {
+      background: #eeeaff;
+      color: #5145cd;
+    }
+
+    .auth h2, .card h2 {
+      margin-bottom: 14px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 13px;
+      margin: 7px 0;
+      border: 1px solid #dedfee;
+      border-radius: 9px;
+      font-size: 15px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 85px;
+    }
+
+    .post {
+      border-top: 1px solid #eeeef5;
+      margin-top: 16px;
+      padding-top: 16px;
+      overflow-wrap: anywhere;
+    }
+
+    .post strong {
+      color: #5145cd;
+    }
+
+    .post-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .post-actions button {
+      border: 0;
+      background: #f0edff;
+      color: #5145cd;
+      padding: 9px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    #notice {
+      margin-top: 12px;
+      color: #b42318;
+      line-height: 1.5;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px 12px;
+      color: #77778d;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>ZENVORA</h1>
+    <p>One World. One Connection. 🌍</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#join">Join Zenvora</a>
+    <a href="#feed">Community</a>
+  </nav>
+
+  <main class="container">
+    <section class="hero" id="home">
+      <h2>Your world. Your people. Your connections.</h2>
+      <p>
+        Meet people, share your thoughts, celebrate moments,
+        and discover a world of new connections.
+      </p>
+      <a class="button" href="#join">Get Started</a>
+      <a class="button secondary" href="#feed">Explore</a>
+    </section>
+
+    <section class="auth" id="join">
+      <h2>Welcome to Zenvora 👋</h2>
+      <p class="muted">
+        This is an early preview of our community website.
+        Registration is not connected to a real account system yet.
+      </p>
+
+      <form id="demoForm">
+        <input id="name" type="text" placeholder="Your name" required>
+        <input id="email" type="email" placeholder="Your email address" required>
+        <input id="password" type="password" placeholder="Create a password" minlength="8" required>
+        <button class="button" type="submit">Preview My Profile</button>
+      </form>
+
+      <p id="notice" role="status"></p>
+    </section>
+
+    <section class="card" id="feed">
+      <h2>🌟 Community Preview</h2>
+      <p class="muted">
+        Here is a preview of the kind of conversations Zenvora can support.
+      </p>
+
+      <div class="post">
+        <strong>Zenvora Community</strong>
+        <p>Welcome to a new place for ideas, friendships, and positive connections! 💜</p>
+        <div class="post-actions">
+          <button type="button" class="like">♡ Like <span>0</span></button>
+          <button type="button" class="comment">💬 Comment</button>
+        </div>
+        <div class="comments"></div>
+      </div>
+
+      <div class="post">
+        <strong>Community Inspiration</strong>
+        <p>Every great connection starts with a simple hello. Who will you meet today? 🌍</p>
+        <div class="post-actions">
+          <button type="button" class="like">♡ Like <span>0</span></button>
+          <button type="button" class="comment">💬 Comment</button>
+        </div>
+        <div class="comments"></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>🚀 The Zenvora Vision</h2>
+      <p class="muted">
+        Profiles, photo and video sharing, messaging, friends,
+        groups, notifications, privacy controls, and more are planned.
+        These features require a secure backend before they can work
+        for real users.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Zenvora · One World. One Connection.
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    document.getElementById("demoForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const notice = document.getElementById("notice");
+
+      if (!name) {
+        notice.textContent = "Please enter your name.";
+        return;
+      }
+
+      notice.style.color = "#5145cd";
+      notice.textContent =
+        "Hello, " + name + "! Your preview is ready. Real registration is not enabled yet.";
+
+      // Do not store or send the password. This form is only a visual demo.
+      document.getElementById("password").value = "";
+    });
+
+    document.querySelectorAll(".like").forEach(function (button) {
+      button.addEventListener("click", function () {
+        const count = button.querySelector("span");
+        count.textContent = Number(count.textContent) + 1;
+        button.firstChild.textContent = "♥ Liked ";
+      });
+    });
+
+    document.querySelectorAll(".comment").forEach(function (button) {
+      button.addEventListener("click", function () {
+        const comment = prompt("Write a comment for this preview post:");
+        if (comment && comment.trim()) {
+          const item = document.createElement("p");
+          item.textContent = "💬 " + comment.trim();
+          item.style.marginTop = "10px";
+          button.closest(".post").querySelector(".comments").appendChild(item);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
